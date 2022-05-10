@@ -9,9 +9,9 @@
     "module": "commonjs"
   },
   "suffix": ".bs.js",
+  "external-stdlib" : "@rescript/std",
   "bs-dependencies": [
     "@ryyppy/rescript-promise",
-    "rescript-url",
     "rescript-nodejs"
   ],
   "warnings": {
