@@ -1,5 +1,5 @@
 {
-  "name": "nj-argument-conversion-service",
+  "name": "nj-argument-conversion-service-dummy-server",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
