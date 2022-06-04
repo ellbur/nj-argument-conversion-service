@@ -8,7 +8,9 @@ COPY ["package.json", "package-lock.json*", "./"]
 RUN npm install --production
 RUN mkdir -p lib/js/src/main
 RUN mkdir -p lib/node_modules
+RUN mkdir -p resources
 COPY ["./lib/js/src/main", "./lib/js/src/main"]
 COPY ["./lib/node_modules", "./lib/node_modules"]
+COPY ["./resources", "./resources"]
 CMD [ "node", "./lib/js/src/main/Index.bs.js" ]
 
