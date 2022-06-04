@@ -8,10 +8,10 @@
   },
   "main": "lib/js/src/Index.bs.js",
   "scripts": {
-    "build:rs": "rescript",
+    "build:rs": "rescript build -with-deps",
     "clean:rs": "rescript clean -with-deps",
-    "start:rs": "rescript build -w",
-    "build": "npm run build:rs"
+    "start:rs": "rescript build -with-deps -w",
+    "build": "npm run build:rs && ./copy-rescript-deps-to-lib"
   },
   "devDependencies": {
     "@ryyppy/rescript-promise": "2.1.0",
