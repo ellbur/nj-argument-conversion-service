@@ -1,0 +1,8 @@
+#!/bin/zsh
+
+set -e
+
+cd /tmp
+wget https://nj-arg-conversion-service-3y3zfcwkiq-ue.a.run.app/test/Zm9vLm1wNA==/test.mp3
+wget https://nj-arg-conversion-service-3y3zfcwkiq-ue.a.run.app/real/MjAyMi8wNCUyMEFwcmlsJTIwMjAyMi8yNiUyMEFwcmlsJTIwMjAyMi9hXzRfMjEubXA0/a_4_21.mp3
+

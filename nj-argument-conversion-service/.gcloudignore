@@ -1,0 +1,9 @@
+/node_modules
+/src/test
+/deploy
+/build-local
+/bsconfig.json
+/test-get-from-cloud-run
+/copy-rescript-deps-to-lib
+/lib/bs
+/test-resources

@@ -1,0 +1,17 @@
+#!/bin/zsh
+
+set -e
+
+PROJ=theservices-346722
+NAME=nj-arg-conversion-service
+
+npm run build
+
+echo 'Building...'
+gcloud builds submit --tag gcr.io/$PROJ/$NAME
+
+echo 'Deploying...'
+gcloud run deploy $NAME --image gcr.io/$PROJ/$NAME --platform managed --allow-unauthenticated --region us-east1
+
+echo 'Done'
+

@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+npm run build
+
+docker build .
+
