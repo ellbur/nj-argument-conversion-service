@@ -100,7 +100,6 @@ let makeThrottled = (source, ~bps, ~windowSizeS) => {
   })->ignore
   
   source->onEnd(() => {
-    Js.Console.log("Got end event")
     s->pushNull(Js.Null.empty)->ignore
   })->ignore
   

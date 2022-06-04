@@ -19,6 +19,8 @@ external responseStream: response => NodeJs.Stream.subtype<NodeJs.Stream.writabl
 let app = express(.())
 
 app->get("/foo.mp4", (_req, res) => {
+  Js.Console.log("Got connection")
+  
   res->status(200)
   res->set("Content-Type", "video/mp4")
   
@@ -36,5 +38,6 @@ let port = {
   process->env->Js.Dict.get("PORT")->flatMap(fromString)->getWithDefault(8333)
 }
 
+Js.Console.log2("Starting server on port", port)
 app->listen(port)
 
