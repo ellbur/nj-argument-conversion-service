@@ -1,0 +1,6 @@
+#!/bin/zsh
+
+npm run build
+
+gcloud functions deploy njArgsRSS --runtime nodejs16 --trigger-http --allow-unauthenticated
+
