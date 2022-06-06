@@ -11,6 +11,7 @@ type rss = {
       "description": string,
       "item": array<{
         "title": string,
+        "description": string,
         "link": string,
         "pubDate": string
       }>
@@ -36,6 +37,7 @@ let generateRSS: array<arg> => string = args => {
       "item": args->Js.Array2.map(arg => {
         {
           "title": arg.caption,
+          "description": arg.description,
           "link": arg.mp3URL,
           "pubDate": arg.date->Js.Date.toUTCString
         }
