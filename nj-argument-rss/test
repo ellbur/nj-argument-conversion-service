@@ -1,0 +1,4 @@
+#!/bin/zsh
+
+wget https://us-central1-theservices-346722.cloudfunctions.net/njArgsRSS -O-
+
