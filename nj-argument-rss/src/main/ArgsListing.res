@@ -46,7 +46,7 @@ let encodeSpaces: string => string = text => {
 }
 
 let listArgs: () => promise<Js.Array.t<arg>> = () => {
-  axiosGet("https://www.njcourts.gov/public/assets/js/objects/webcast/webcast.json")->then(resp => {
+  axiosGet("https://archive.njcourts.gov/public/assets/js/objects/webcast/webcast.json")->then(resp => {
     let res = [ ]
     let doc = resp.data->jsonToDoc
     let webcast = doc["webcast"]
@@ -54,7 +54,7 @@ let listArgs: () => promise<Js.Array.t<arg>> = () => {
       wc["Video"]->ofe(videos => {
         videos->afe(video => {
           video["AudioURL"]->ofe(mp3Path => {
-            let mp3URL = "https://www.njcourts.gov" ++ (mp3Path->encodeSpaces)
+            let mp3URL = "https://archive.njcourts.gov" ++ (mp3Path->encodeSpaces)
             let (year, month, date) = switch wc["ScheduledDate"]->Js.String2.split("/") {
               | [monthString, dayString, yearString] => {
                 let year = yearString->Belt.Float.fromString->Belt.Option.getExn
