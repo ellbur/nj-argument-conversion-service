@@ -62,7 +62,7 @@ let listArgs: () => promise<Js.Array.t<arg>> = () => {
                 let date = dayString->Belt.Float.fromString->Belt.Option.getExn
                 (year, month, date)
               }
-              | others => (0.0, 0.0, 0.0)
+              | _ => (0.0, 0.0, 0.0)
             }
             res->Js.Array2.push({
               caption: wc["Title"],
