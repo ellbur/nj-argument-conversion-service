@@ -9,10 +9,13 @@
     "module": "commonjs"
   },
   "suffix": ".bs.js",
-  "external-stdlib" : "@rescript/std",
   "bs-dependencies": [
-    "@ryyppy/rescript-promise",
-    "rescript-nodejs"
+    "@rescript/core"
+  ],
+  "bs-dev-dependencies": [
+  ],
+  "bsc-flags": [
+    "-open RescriptCore"
   ],
   "warnings": {
     "error" : "+101"
