@@ -1,5 +1,5 @@
 
-ArgsListing.listArgs()->Promise.thenResolve(args => {
-  Js.Console.log(RSSGeneration.generateRSS(args))
+ArgsListing2.listArgs()->Promise.thenResolve(args => {
+  Console.log(RSSGeneration.generateRSS(args))
 })->ignore
 

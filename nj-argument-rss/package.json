@@ -2,20 +2,20 @@
   "name": "nj-args-rss",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "dependencies": {
     "@google-cloud/functions-framework": "^3.0.0",
-    "axios": "0.26.1",
+    "axios": "1.6.5",
     "xml2js": "0.4.23",
     "node-html-parser": "5.3.3",
     "@rescript/core": "0.6.0"
   },
-  "main": "lib/js/src/main/Index.bs.js",
+  "main": "lib/es6/src/main/Index.res.mjs",
   "scripts": {
     "build:rs": "rescript build",
     "clean:rs": "rescript clean",
     "start:rs": "rescript build -w",
-    "build:copy": "./copy-rescript-deps-to-lib",
-    "build": "npm run build:rs && npm run build:copy"
+    "build": "npm run build:rs"
   },
   "devDependencies": {
     "rescript": "11.0.0"

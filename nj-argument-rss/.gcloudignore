@@ -1,9 +1,9 @@
 .gcloudignore
 .git
 .gitignore
+deploy
 /node_modules
-/src
-bsconfig.json
+/src/test
 .merlin
-/lib/bs
+/lib
 /working

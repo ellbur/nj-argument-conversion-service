@@ -1,5 +1,5 @@
 
-let listArgs = ArgsListing.listArgs
+let listArgs = ArgsListing2.listArgs
 let generateRSS = RSSGeneration.generateRSS
 let log = Js.Console.log
 let thenResolve = Promise.thenResolve

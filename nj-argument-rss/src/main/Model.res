@@ -1,8 +1,8 @@
 
 type arg = {
   caption: string,
-  date: Js.Date.t,
-  description: string,
+  date: option<Js.Date.t>,
+  description: option<string>,
   mp3URL: string
 }
 
